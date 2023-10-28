@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Encode+Sans+SC:wght@900&family=Nosifer&family=Noto+Sans:wght@100&family=Open+Sans:ital@1&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,400;0,700;1,300;1,400;1,500;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,200&family=Young+Serif&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+  font-family: 'Alfa Slab One', serif;
+}
+h1 {
+    padding:30px;
+    text-align: center;
+    font-size: 60px;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #bd05fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.calculator {
+    background-color: #3a4452;
+    padding: 20px;
+    border-radius: 10px;
+}
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(225,225,225,0.1), 5px 5px 15px rgba(0, 0, 0,0.2) ;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+form input.equal {
+    width: 145px;
+}
+
+form input.operator {
+    color: aqua;
+}
