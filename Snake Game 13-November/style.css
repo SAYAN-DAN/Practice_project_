@@ -39,9 +39,12 @@ body {
   grid-template-columns: repeat(36, 1fr);
   grid-template-rows: repeat(18, 1fr);
 }
-#head {
+.head {
   background-color: green;
 }
-#body {
-  background-color: yellow;
+.food {
+  background-color: rgb(255, 0, 34);
+}
+.body {
+  background-color: rgb(12, 193, 254);
 }
