@@ -6,7 +6,7 @@ const gameoverSound = new Audio("gameover.mp3");
 const moveSound = new Audio("move.mp3");
 const musicSound = new Audio("music.mp3");
 
-let speed = 8;
+let speed = 12;
 let score = 0;
 let lastPaintTime = 0;
 let snakeArr = [{ x: 13, y: 15 }];
@@ -33,7 +33,7 @@ function isCollide(sArr) {
     }
   }
   // You You bump into the wall
-  if (sArr[0].x >= 20 || sArr[0].x <= 0 || sArr[0].y >= 20 || sArr[0].y <= 0) {
+  if (sArr[0].x >= 30 || sArr[0].x <= 0 || sArr[0].y >= 30 || sArr[0].y <= 0) {
     return true;
   }
 }
@@ -45,9 +45,9 @@ function gameEngine() {
     // moveSound.pause();
     musicSound.pause();
     direction = { x: 0, y: 0 };
-    alert("press any key to start new Game! ");
+    alert("Game Over,press any key to start new Game! ");
     snakeArr = [{ x: 13, y: 15 }];
-    // musicSound.play();
+    musicSound.play();
     score = 0;
   }
 
@@ -55,13 +55,20 @@ function gameEngine() {
 
   if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
     foodSound.play();
+    score += 1;
+    if (score > hiscoreval) {
+      hiscoreval = score;
+      localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+      hiscoreBox.innerHTML = "hiscore: " + hiscoreval;
+    }
+    scoreBox.innerHTML = "score: " + score;
     snakeArr.unshift({
       x: snakeArr[0].x + direction.x,
       y: snakeArr[0].y + direction.y,
     });
 
     let a = 2;
-    let b = 18;
+    let b = 28;
 
     // Corrected syntax for generating new position for the food
     food = {
@@ -105,7 +112,15 @@ function gameEngine() {
 }
 
 // Main logic Starts Here
-
+musicSound.play();
+let hiscore = localStorage.getItem("hiscore");
+if (hiscore === null) {
+  hiscoreval = 0;
+  localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+} else {
+  hiscoreval = JSON.parse(hiscore);
+  hiscoreBox.innerHTML = "hiscore: " + hiscore;
+}
 window.requestAnimationFrame(main);
 window.addEventListener("keydown", function (e) {
   direction = { x: 0, y: 1 };

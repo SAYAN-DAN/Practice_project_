@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Noto+Sans+TC:wght@100&family=Open+Sans:wght@300&family=Oswald:wght@200;700&family=Poppins:wght@100;200&family=Roboto:ital,wght@0,100;1,100&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Encode+Sans+SC:wght@900&family=Kanit:ital,wght@1,100&family=Lobster&family=Monoton&family=Nosifer&family=Noto+Color+Emoji&family=Noto+Sans:wght@100&family=Open+Sans:ital,wght@1,300;1,400&family=Oswald:wght@200&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,500;1,700;1,900&family=Sometype+Mono&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,200&family=Ubuntu:wght@300&family=Young+Serif&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -36,8 +38,8 @@ body {
     rgb(253, 240, 166)
   );
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr); 
 }
 /* #Gameover {
   display: flex;
@@ -45,6 +47,21 @@ body {
   align-items: center;
   color: black;
 } */
+
+#scoreBox {
+  position: absolute;
+  top: 9px;
+  right: 200px;
+  font-size: 50px;
+  font-family: "Lobster", sans-serif;
+}
+#hiscoreBox {
+  position: absolute;
+  top: 60px;
+  right: 165px;
+  font-size: 50px;
+  font-family: "Lobster", sans-serif;
+}
 .head {
   background: linear-gradient(rgb(255, 157, 0) , rgb(255, 0, 0));
   border-radius: 8px;
@@ -52,7 +69,7 @@ body {
   transform: scale(1.15);
 }
 .food {
-  background: linear-gradient(rgb(0, 255, 255) , gold);
+  background: linear-gradient(rgb(255, 98, 0) , rgb(255, 0, 238));
   border-radius: 50%;
   border:  0.25vmin solid white;
 }
