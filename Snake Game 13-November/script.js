@@ -6,11 +6,11 @@ const gameoverSound = new Audio("gameover.mp3");
 const moveSound = new Audio("move.mp3");
 const musicSound = new Audio("music.mp3");
 
-let speed = 6;
+let speed = 8;
 let score = 0;
 let lastPaintTime = 0;
-let snakeArr = [{ x: 18, y: 15 }];
-let food = { x: 10, y: 11 };
+let snakeArr = [{ x: 13, y: 15 }];
+let food = { x: 6, y: 7 };
 
 // All Function
 
@@ -25,18 +25,29 @@ function main(currentTime) {
 }
 
 function isCollide(sArr) {
-  return false;
+  // if you bump to yourself
+
+  for (let i = 1; i < sArr.length; i++) {
+    if (sArr[i].x === sArr[0].x && sArr[i].y === sArr[0].y) {
+      return true;
+    }
+  }
+  // You You bump into the wall
+  if (sArr[0].x >= 20 || sArr[0].x <= 0 || sArr[0].y >= 20 || sArr[0].y <= 0) {
+    return true;
+  }
 }
 function gameEngine() {
   // Updating the snaake array and food
 
   if (isCollide(snakeArr)) {
     gameoverSound.play();
-    moveSound.pause();
+    // moveSound.pause();
+    musicSound.pause();
     direction = { x: 0, y: 0 };
     alert("press any key to start new Game! ");
-    snakeArr = [{ x: 18, y: 15 }];
-    musicSound.play();
+    snakeArr = [{ x: 13, y: 15 }];
+    // musicSound.play();
     score = 0;
   }
 
@@ -50,13 +61,8 @@ function gameEngine() {
     });
 
     let a = 2;
-    let b = 34;
+    let b = 18;
 
-    // Corrected syntax for generating new position for the food
-    // food = {
-    //   x: Math.round(a + (b - a) * Math.random()),
-    //   y: Math.round(a + (b - a) * Math.random()),
-    // };
     // Corrected syntax for generating new position for the food
     food = {
       x: Math.round(a + (b - a) * Math.random()),
@@ -75,6 +81,7 @@ function gameEngine() {
 
   // Display: The snake and food
   // Display the snake
+  // const board = document.getElementById("board");
   board.innerHTML = "";
   snakeArr.forEach(function (element, index) {
     snakeElement = document.createElement("div");

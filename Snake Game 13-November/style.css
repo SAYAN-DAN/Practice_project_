@@ -36,15 +36,28 @@ body {
     rgb(253, 240, 166)
   );
   display: grid;
-  grid-template-columns: repeat(36, 1fr);
-  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
+/* #Gameover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+} */
 .head {
-  background-color: green;
+  background: linear-gradient(rgb(255, 157, 0) , rgb(255, 0, 0));
+  border-radius: 8px;
+  border:  0.25vmin solid black;
+  transform: scale(1.15);
 }
 .food {
-  background-color: rgb(255, 0, 34);
+  background: linear-gradient(rgb(0, 255, 255) , gold);
+  border-radius: 50%;
+  border:  0.25vmin solid white;
 }
 .body {
-  background-color: rgb(12, 193, 254);
+  background: linear-gradient(rgb(9, 253, 53) , rgb(255, 0, 191));
+  border-radius: 30%;
+  border:  0.25vmin solid rgb(58, 57, 57);
 }
