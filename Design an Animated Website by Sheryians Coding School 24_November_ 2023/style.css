@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  width: 100%;
+  height: 100%;
+}
+#page1 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1vw;
+  /* padding-top: 15vw; */
+  padding-top: 27vh;
+  text-align: center;
+  /* background-color: red; */
+}
+#page1 h1 {
+  position: relative;
+  font-family: futura;
+  font-size: 16.6vw;
+  text-transform: uppercase;
+  line-height: 14vw;
+  letter-spacing: -15px;
+}
+#video-container {
+  width: 100%;
+  height: 100vh;
+  background-color: gold;
+  margin-top: 1vw;
+}
+#video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#video-container #play {
+  padding: 3vw 2.5vw;
+  font-size: 1.5vw;
+  background-color: #000;
+  position: fixed;
+  color: white;
+  font-family: futura;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
