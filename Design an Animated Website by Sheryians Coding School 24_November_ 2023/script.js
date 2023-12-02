@@ -1,4 +1,5 @@
-var Videocon = document.querySelector("#video-container");
+function videoconanimation() {
+  var Videocon = document.querySelector("#video-container");
 var playbtn = document.querySelector("#play");
 
 Videocon.addEventListener("mouseenter", function () {
@@ -17,7 +18,29 @@ Videocon.addEventListener("mouseleave", function () {
 
 Videocon.addEventListener("mousemove", function (dets) {
   gsap.to(playbtn, {
-    left: dets.x,
-    top: dets.y,
+    left: dets.x-80,
+    top: dets.y-80,
   });
 });
+
+}
+
+videoconanimation()
+
+function lodinganimation() {
+  gsap.from("#page1 h1", {
+    y:30,
+    opacity:0,
+    delay:0.5,
+    duration:0.5,
+    stagger:0.3,
+  })
+  gsap.from("#page1 #video-container", {
+    y:30,
+    opacity:0,
+    delay:1.5,
+    duration:0.5,
+  })
+}
+
+lodinganimation()
