@@ -96,6 +96,8 @@ html {
     height: 100%;
     border: none;
     resize: none;
+    padding: 15px;
+    font-size: 1.2vw;
 }
 
 .box textarea:focus {
