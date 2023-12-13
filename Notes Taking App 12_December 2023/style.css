@@ -22,7 +22,7 @@ html {
 }
 
 .button {
-  background-color: rgb(15, 5, 62);
+  background-color: rgb(14, 14, 67);
   width: 100%;
   /* position: fixed; */
   /* margin-bottom: 60px; */
@@ -53,6 +53,7 @@ html {
 .button img {
   width: 4vw;
   height: 9vh;
+  cursor: pointer;
 }
 .Notebox {
   width: 100%;
@@ -60,22 +61,20 @@ html {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 5vw;
-  background-color: rgb(57, 57, 57);
+  padding: 2vw;
+  background-color: rgb(1, 51, 34);
 }
 .box {
-  width: 400px;
-  height: 450px;
+  width: 350px;
+  height: 400px;
   background-color: #fff;
-  border-radius: 10px;
-  /* padding: 20px; */
   margin-bottom: 60px;
 }
 
 .box .box-top {
   width: 100%;
   height: 7vh;
-  background-color: rgb(99, 99, 99);
+  background-color: rgb(3, 4, 54);
   display: flex;
   justify-content: flex-end;
 }
@@ -83,26 +82,27 @@ html {
 .box .box-top i {
   font-size: 1.6vw;
   padding: 13px 10px;
-  color: #fff;
+  color: #e2e2e2;
   cursor: pointer;
 }
 
 .box .box-top i:hover {
-    color: rgb(255, 115, 255);
+  color: rgb(115, 246, 255);
 }
 
 .box textarea {
-    width: 100%;
-    height: 100%;
-    border: none;
-    resize: none;
-    padding: 15px;
-    font-size: 1.2vw;
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  padding: 15px;
+  font-size: 1.2vw;
+  border-radius: 20px;
 }
 
 .box textarea:focus {
-    border: 0;
-    outline: 0;
+  border: 0;
+  outline: 0;
 }
 
 /* @media (max-width: 1250px) {
