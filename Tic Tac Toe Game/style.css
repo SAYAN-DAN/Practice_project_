@@ -1,14 +1,113 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@font-face {
+  font-family: Agbalumo;
+  src: url(./Agbalumo-Regular.ttf);
 }
-body , html {
-    width: 100%;
-    height: 100%;
+
+@font-face {
+  font-family: matter;
+  src: url(./matter-light.ttf);
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
 .main {
-    width: 100%;
-    height: 100%;
-    background-color: aqua;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  width: 100%;
+  height: 12vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar img {
+  width: 4vw;
+  border-radius: 10px;
+}
+
+.navbar h1 {
+  font-family: Agbalumo;
+  color: #fff;
+  /* font-weight: 100; */
+}
+
+.gamecontainer {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 30px;
+  gap: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+}
+
+.box {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxtext {
+  font-family: matter;
+  font-size: 8vw;
+}
+
+.imgbox img {
+  width: 9vw;
+}
+
+.gameinfo button {
+  font-family: Agbalumo;
+  font-weight: 100;
+  font-size: 1.2vw;
+  padding: 0.4vw 2vw;
+  /* border: none; */
+  outline: none;
+  cursor: pointer;
+}
+
+.gameinfo h1,
+h3 {
+  font-family: Agbalumo;
+  font-weight: 100;
+}
+
+.gameinfo button:hover {
+  background-color: #acc9ff;
+  border: none;
+}
+
+.imgbox img {
+    display: none;
+}
+.bt-0 {
+    border-top: 0;
+}
+.br-0 {
+    border-right: 0;
+}
+.bl-0 {
+    border-left: 0;
+}
+.bb-0 {
+    border-bottom: 0;
 }
