@@ -66,6 +66,9 @@ html {
   align-items: center;
 }
 
+.box:hover {
+  background-color: antiquewhite;
+}
 .boxtext {
   font-family: matter;
   font-size: 8vw;
@@ -115,4 +118,3 @@ h3 {
 .bb-0 {
   border-bottom: 0;
 }
-
