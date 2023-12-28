@@ -80,6 +80,7 @@ html {
 
 .gameinfo button {
   font-family: Agbalumo;
+  margin-top: 10px;
   font-weight: 100;
   font-size: 1.2vw;
   padding: 0.4vw 2vw;
@@ -94,13 +95,20 @@ h3 {
   font-weight: 100;
 }
 
+.gameinfo h1 {
+  font-size: 45px;
+}
+.gameinfo h3 {
+  font-size: 35px;
+}
 .gameinfo button:hover {
   background-color: #acc9ff;
-  border: none;
+  /* border: none; */
 }
 
 .imgbox img {
-  opacity: 1;
+  opacity: 0;
+  /* transition: all ease-in 1s; */
 }
 
 .bt-0 {
@@ -117,4 +125,31 @@ h3 {
 
 .bb-0 {
   border-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .gamecontainer {
+    flex-wrap: wrap;
+  }
+  .gameinfo button {
+    padding: 1vw 4vw;
+    font-size: 4vw;
+  }
+  .gameinfo h3 {
+    font-size: 20px;
+  }
+  .gameinfo h1 {
+    font-size: 35px;
+  }
+  .navbar img {
+    width: 10vw;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+  .imgbox img {
+    width:30vw;
+  }
 }

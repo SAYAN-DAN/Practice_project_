@@ -4,6 +4,7 @@ let music = new Audio("./SoundContainer/music.mp3");
 
 let turn = "x";
 let gameover1 = false;
+let reset = document.querySelector(".reset")
 // to Change the turn
 const changeTurn = function () {
   return turn === "x" ? "0" : "x";
@@ -33,6 +34,7 @@ function checkwin() {
       document.querySelector(".info").innerText =
         boxtexts[e[0]].innerText + "won";
       gameover1 = true;
+      document.querySelector(".imgbox").getElementsByTagName("img")[0].style.opacity = 1
     }
   });
 }
@@ -49,8 +51,21 @@ Array.from(boxes).forEach(function (element) {
       // Audioturn.play(); // Uncomment this if you want to play audio
       checkwin();
       if (!gameover1) {
-        document.querySelector(".info").innerText = "Turn for " + turn; // Corrected this line
+        document.querySelector(".info").innerText = "Turn for " + turn; 
       }
     }
   });
 });
+
+// when click reset button remove all text
+
+reset.addEventListener("click", function() {
+  let boxtexts = document.querySelectorAll(".boxtext");
+  Array.from(boxtexts).forEach(function(element) {
+    element.innerText = ""
+    let turn = "x";
+    gameover1 = false
+    document.querySelector(".info").innerText = "Turn for " + turn;
+    document.querySelector(".imgbox").getElementsByTagName("img")[0].style.opacity = 0
+  })
+})
