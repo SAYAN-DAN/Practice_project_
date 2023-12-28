@@ -100,7 +100,7 @@ h3 {
 }
 
 .imgbox img {
-  display: none;
+  opacity: 1;
 }
 
 .bt-0 {
