@@ -1,11 +1,11 @@
 @font-face {
   font-family: Agbalumo;
-  src: url(./Agbalumo-Regular.ttf);
+  src: url(./Font/Agbalumo-Regular.ttf);
 }
 
 @font-face {
   font-family: matter;
-  src: url(./matter-light.ttf);
+  src: url(./Font/matter-light.ttf);
 }
 * {
   padding: 0;
